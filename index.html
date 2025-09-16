@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creator Profile — Enhanced Media Viewers</title>
+    <title>Creator Profile Enhanced Media Viewer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
             <div></div>
         </div>
     </div>
-    
+
     <!-- Compact Navigation Menu -->
     <nav class="menu">
         <ul>
@@ -33,16 +33,29 @@
             <div class="profile-pic-wrapper has-story">
                 <img id="profilePic" class="profile-pic" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Creator profile picture">
             </div>
-            <div class="creator-name">Sofia Creator <span class="verified">
-                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                </svg>
-            </span></div>
-            <div class="username">@sofia123</div>
-            <div class="stats">
-                <div class="stat"><strong>15.2k</strong> Followers</div>
-                <div class="stat"><strong>320k</strong> Likes</div>
+            
+            <div class="creator-name">
+                Sofia Creator
+                <span class="verified">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                </span>
             </div>
+            
+            <div class="username">@sofia123</div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <strong>15.2k</strong>
+                    Followers
+                </div>
+                <div class="stat">
+                    <strong>320k</strong>
+                    Likes
+                </div>
+            </div>
+            
             <div class="actions">
                 <button class="subscribe" onclick="openSubscribeModal()">Subscribe</button>
                 <button class="message" id="openChat">Message</button>
@@ -55,21 +68,21 @@
             <button class="tab-btn" data-tab="reels">Reels</button>
             <button class="tab-btn" data-tab="exclusive">Exclusive</button>
         </div>
-        
+
         <!-- Photos Content -->
         <div id="photos-content" class="content active">
             <div class="photos-grid" id="photosGrid">
                 <!-- Photos will be inserted here by JavaScript -->
             </div>
         </div>
-        
-        <!-- Reels Content -->
+
+        <!-- REPLACE the old "reels-content" block with this -->
         <div id="reels-content" class="content">
             <div class="reels-grid" id="reelsGrid">
-                <!-- Reels will be inserted here by JavaScript -->
+                <!-- JS will inject wrappers here -->
             </div>
         </div>
-        
+
         <!-- Exclusive Content -->
         <div id="exclusive-content" class="content">
             <div class="exclusive-content">
@@ -83,8 +96,10 @@
                 </div>
             </div>
         </div>
-        
-        <footer>&copy; <span id="year"></span> Sofia Creator</footer>
+
+        <footer>
+            &copy; <span id="year"></span> Sofia Creator
+        </footer>
     </div>
 
     <!-- Photo Viewer Modal -->
@@ -111,6 +126,7 @@
         <div class="feed" id="reelFeed"></div>
     </div>
 
+    <!-- Chat Screen -->
     <div id="chatScreen" class="chat-screen container">
         <div class="chat-header">
             <div class="chat-header-left">
@@ -138,7 +154,9 @@
                 </button>
             </div>
         </div>
+
         <div class="chat-messages" id="chatMessages"></div>
+
         <div class="chat-input">
             <input id="chatInput" placeholder="Message...">
             <button id="sendMessage">
@@ -176,6 +194,7 @@
         </div>
     </div>
 
+    <!-- Donation Method Modal -->
     <div id="chooseMethodModal" class="modal">
         <div class="modal-content">
             <button class="close-x-button" id="closeDonate">
@@ -186,15 +205,16 @@
             <h3>Choose Your Donation Method</h3>
             <div class="modal-buttons-container">
                 <button class="modal-button btc-button" id="openBtcDonate">Donate with Bitcoin</button>
-                <form action="https://www.paypal.com/donate" method="post" target="_blank" style="display:inline;">
-                    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@EXAMPLE.COM"/>
-                    <input type="hidden" name="currency_code" value="USD"/>
-                    <input type="submit" class="modal-button paypal-button" value="Donate with PayPal"/>
+                <form action="https://www.paypal.com/donate" method="post" target="_blank" style="display: inline;">
+                    <input type="hidden" name="business" value="YOUR-PAYPAL-EMAIL@EXAMPLE.COM">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="submit" class="modal-button paypal-button" value="Donate with PayPal">
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Bitcoin Donation Modal -->
     <div id="btcDonateModal" class="modal">
         <div class="modal-content">
             <button class="close-x-button" id="closeBtcDonate">
@@ -224,6 +244,7 @@
         </div>
     </div>
 
+    <!-- Story Modal -->
     <div id="storyModal" class="story-modal">
         <div class="story-container" id="storyContainer">
             <!-- Story Header with Profile Picture, Username, and Verified Badge -->
@@ -240,10 +261,10 @@
                     </div>
                 </div>
             </div>
-
+            
             <div id="progressBars" class="progress-bars"></div>
             <div id="storyCount" class="story-count"></div>
-
+            
             <!-- Story images -->
             <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="story-image active" data-index="0" alt="Story 1">
             <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="story-image" data-index="1" alt="Story 2">
@@ -262,6 +283,7 @@
                     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                 </svg>
             </button>
+            
             <button class="btn nav-btn nav-btn-right" id="nextStoryBtn">
                 <svg class="nav-icon" viewBox="0 0 24 24" width="28" height="28">
                     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
