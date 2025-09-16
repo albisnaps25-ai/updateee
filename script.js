@@ -1,18 +1,18 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // SVG icons for like, comment, and donate
-const heartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
+const heartIcon = `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
 
-const commentIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`;
+const commentIcon = `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`;
 
-const giftIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,12 20,22 4,22 4,12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="m5,7 3,-4a2,2 0 0,1 4,0v4h-4z"></path><path d="m19,7 -3,-4a2,2 0 0,0 -4,0v4h4z"></path></svg>`;
+const giftIcon = `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,12 20,22 4,22 4,12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>`;
 
 // New SVG icons
-const clipboardIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+const clipboardIcon = `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>`;
 
-const chatBubbleIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`;
+const chatBubbleIcon = `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>`;
 
-const rightArrowIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>`;
+const rightArrowIcon = `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg>`;
 
 // Photo and Reel Data
 const photos = [
@@ -99,20 +99,78 @@ const reels = [
   },
 ];
 
-// Initialize photo and reel grids with Instagram-style post cards
+// Initialize photo grids with Instagram-style post cards
 const photosGrid = document.getElementById('photosGrid');
 photos.forEach(photo => {
   const postCard = createPostCard(photo, 'photo');
   photosGrid.appendChild(postCard);
 });
 
+/* --------------  REELS – NEW OVERLAY SYSTEM  -------------- */
 const reelsGrid = document.getElementById('reelsGrid');
 reels.forEach(reel => {
-  const postCard = createPostCard(reel, 'reel');
-  reelsGrid.appendChild(postCard);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'reel-wrapper';
+    
+    /* ----  video  ---- */
+    const video = document.createElement('video');
+    video.className = 'reel-video';
+    video.src = reel.url;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('poster', reel.thumbnail);
+    
+    /* ----  overlay container  ---- */
+    const overlay = document.createElement('div');
+    overlay.className = 'reel-overlay';
+    
+    /* top-left username */
+    const user = document.createElement('div');
+    user.className = 'reel-user';
+    user.textContent = '@sofia123';
+    overlay.appendChild(user);
+    
+    /* right-side action buttons */
+    const actions = document.createElement('div');
+    actions.className = 'reel-actions';
+    
+    const likeBtn = document.createElement('button');
+    likeBtn.className = 'reel-like';
+    likeBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3z"/></svg>`;
+    likeBtn.onclick = () => likeBtn.classList.toggle('liked');
+    actions.appendChild(likeBtn);
+    
+    const donateBtn = document.createElement('button');
+    donateBtn.className = 'reel-donate';
+    donateBtn.textContent = 'Donate';
+    donateBtn.onclick = () => document.getElementById('openDonate').click();
+    actions.appendChild(donateBtn);
+    
+    overlay.appendChild(actions);
+    
+    /* ----  assembler  ---- */
+    wrapper.appendChild(video);
+    wrapper.appendChild(overlay);
+    reelsGrid.appendChild(wrapper);
+    
+    /* ----  UX: hide overlay while playing  ---- */
+    let hideTimer;
+    const showOverlay = () => {
+        overlay.classList.add('visible');
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => overlay.classList.remove('visible'), 2000);
+    };
+    
+    wrapper.addEventListener('click', () => {
+        video.paused ? video.play() : video.pause();
+        showOverlay();
+    });
+    
+    video.addEventListener('play', showOverlay);
+    video.addEventListener('pause', () => overlay.classList.add('visible'));
 });
 
-// Function to create Instagram-style post card
+// Function to create Instagram-style post card (PHOTOS ONLY)
 function createPostCard(item, type) {
   const postCard = document.createElement('div');
   postCard.className = 'post-card';
@@ -124,10 +182,10 @@ function createPostCard(item, type) {
   // Main image
   const img = document.createElement('img');
   img.className = 'post-image';
-  img.src = type === 'photo' ? item.url : item.thumbnail;
-  img.alt = type === 'photo' ? `Photo ${item.id}` : `Reel ${item.id}`;
+  img.src = item.url;
+  img.alt = `Photo ${item.id}`;
   img.setAttribute('crossorigin', 'anonymous');
-  img.setAttribute('data-image', type === 'photo' ? item.url : item.thumbnail);
+  img.setAttribute('data-image', item.url);
 
   // Header with profile info
   const imageHeader = document.createElement('div');
@@ -166,7 +224,7 @@ function createPostCard(item, type) {
     if (likeBtn.classList.contains('liked')) {
       countSpan.textContent = parseInt(countSpan.textContent) + 1;
       // Update the SVG to filled heart
-      likeBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span class="count">${countSpan.textContent}</span>`;
+      likeBtn.innerHTML = `<svg class="icon" viewBox="0 0 24 24" fill="#ed4956" stroke="#ed4956" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span class="count">${countSpan.textContent}</span>`;
     } else {
       countSpan.textContent = parseInt(countSpan.textContent) - 1;
       // Revert to outline heart
@@ -177,7 +235,7 @@ function createPostCard(item, type) {
   // Comment button with SVG
   const commentBtn = document.createElement('button');
   commentBtn.className = 'stat-btn';
-  commentBtn.innerHTML = `${commentIcon} ${item.comments}`;
+  commentBtn.innerHTML = `${commentIcon} <span class="count">${item.comments}</span>`;
   commentBtn.onclick = (e) => {
     e.stopPropagation();
     alert('Comments functionality coming soon!');
@@ -208,7 +266,7 @@ function createPostCard(item, type) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = type === 'photo' ? `photo-${item.id}.jpg` : `reel-${item.id}.jpg`;
+      a.download = `photo-${item.id}.jpg`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -227,11 +285,7 @@ function createPostCard(item, type) {
   // Add click event to open viewer
   postCard.addEventListener('click', (e) => {
     if (e.target !== downloadBtn && !e.target.closest('.stat-btn')) {
-      if (type === 'photo') {
-        openPhotoViewer(item.id);
-      } else {
-        openReelViewer(item.id);
-      }
+      openPhotoViewer(item.id);
     }
   });
 
@@ -268,14 +322,14 @@ function openPhotoViewer(id) {
 
     const likeBtn = document.createElement('button');
     likeBtn.className = 'like-btn';
-    likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+    likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
     likeBtn.onclick = (e) => {
       e.stopPropagation();
       likeBtn.classList.toggle('liked');
       if (likeBtn.classList.contains('liked')) {
-        likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+        likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" fill="#ed4956" width="24" height="24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>';
       } else {
-        likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+        likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
       }
     };
 
@@ -302,7 +356,7 @@ function closePhotoViewer() {
   document.getElementById('photoViewerModal').style.display = 'none';
 }
 
-// Reel Viewer Functions (UPDATED with wrapper, z-index, responsive, and auto-hide overlay)
+// Reel Viewer Functions (keep existing functionality for full-screen modal)
 function openReelViewer(id) {
   const modal = document.getElementById('reelViewerModal');
   const feed = document.getElementById('reelFeed');
@@ -312,40 +366,35 @@ function openReelViewer(id) {
     const view = document.createElement('div');
     view.className = 'post-view';
 
-    // Username overlay (stays at view level)
+    // Add username overlay
     const usernameOverlay = document.createElement('div');
     usernameOverlay.className = 'media-username';
     usernameOverlay.textContent = '@sofia123';
     view.appendChild(usernameOverlay);
 
-    // Wrapper around video and overlay (key change)
-    const mediaWrap = document.createElement('div');
-    mediaWrap.className = 'media-wrap';
-    view.appendChild(mediaWrap);
-
-    // Video element
     const video = document.createElement('video');
     video.className = 'post-media';
     video.src = reel.url;
     video.controls = true;
     video.autoplay = true;
     video.loop = true;
-    mediaWrap.appendChild(video);
+    video.style.width = 'auto';
+    video.style.height = 'auto';
+    view.appendChild(video);
 
-    // Overlay actions positioned inside wrapper
     const actions = document.createElement('div');
     actions.className = 'post-actions overlay';
 
     const likeBtn = document.createElement('button');
     likeBtn.className = 'like-btn';
-    likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+    likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
     likeBtn.onclick = (e) => {
       e.stopPropagation();
       likeBtn.classList.toggle('liked');
       if (likeBtn.classList.contains('liked')) {
-        likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+        likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" fill="#ed4956" width="24" height="24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>';
       } else {
-        likeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+        likeBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
       }
     };
 
@@ -359,13 +408,8 @@ function openReelViewer(id) {
 
     actions.appendChild(likeBtn);
     actions.appendChild(donateBtn);
-    mediaWrap.appendChild(actions);
 
-    // Optional UX: hide overlay during playback to avoid blocking
-    video.addEventListener('play', () => actions.classList.add('overlay-hidden'));
-    video.addEventListener('pause', () => actions.classList.remove('overlay-hidden'));
-    video.addEventListener('ended', () => actions.classList.remove('overlay-hidden'));
-
+    view.appendChild(actions);
     feed.appendChild(view);
   });
 
@@ -534,7 +578,7 @@ sendMessage.onclick = () => {
       setTimeout(() => {
         typingIndicator.remove();
         const reply = addMessage("Check this out 👉 https://mywebsite.com", "creator");
-        reply.querySelector(".msg").innerHTML = 'Check this out ' + rightArrowIcon + ' https://mywebsite.com';
+        reply.querySelector(".msg").innerHTML = 'Check this out ' + rightArrowIcon + ' <a href="https://mywebsite.com" target="_blank">https://mywebsite.com</a>';
       }, 3000);
     }, 2000);
   }
@@ -632,7 +676,7 @@ function showStory(i) {
   currentStory = i;
   isLiked = false;
   likeStoryBtn.classList.remove("liked");
-  likeStoryBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+  likeStoryBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
   updateNav();
 }
 
@@ -681,9 +725,9 @@ likeStoryBtn.onclick = () => {
   isLiked = !isLiked;
   likeStoryBtn.classList.toggle("liked", isLiked);
   if (isLiked) {
-    likeStoryBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+    likeStoryBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" fill="#ed4956" width="24" height="24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>';
   } else {
-    likeStoryBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+    likeStoryBtn.innerHTML = '<svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>';
   }
 };
 
